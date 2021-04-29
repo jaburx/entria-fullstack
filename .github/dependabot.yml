@@ -1,0 +1,37 @@
+version: 2
+updates:
+- package-ecosystem: npm
+  directory: "/"
+  schedule:
+    interval: daily
+    time: "09:00"
+  pull-request-branch-name:
+    separator: "-"
+  open-pull-requests-limit: 10
+  ignore:
+  - dependency-name: husky
+    versions:
+    - 4.3.7
+    - 4.3.8
+  - dependency-name: urijs
+    versions:
+    - 1.19.5
+  - dependency-name: "@babel/plugin-proposal-function-sent"
+    versions:
+    - 7.12.1
+  - dependency-name: lodash
+    versions:
+    - 4.17.20
+  - dependency-name: elliptic
+    versions:
+    - 6.5.3
+  - dependency-name: react-devtools
+    versions:
+    - 4.8.2
+  - dependency-name: "@babel/plugin-proposal-pipeline-operator"
+    versions:
+    - 7.10.1
+  - dependency-name: handlebars
+    versions:
+    - 4.7.6
+  rebase-strategy: disabled
